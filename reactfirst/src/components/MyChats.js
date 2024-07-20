@@ -33,7 +33,7 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
 
-      const { data } = await axios.get(`/api/chat`, config);
+      const { data } = await axios.get(`https://tall-a-tiv.onrender.com/api/chat`, config);
       console.log("vdsbv", data);
       setChats(data);
     } catch (error) {

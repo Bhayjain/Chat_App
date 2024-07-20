@@ -63,7 +63,7 @@ if (process.env.NODE_ENV == "production") {
 
 
 // Error Handling middlewares
-app.use(notFound);
+app.use(notFound);W
 app.use(errorHandler);
 
 
@@ -77,7 +77,7 @@ const server = app.listen(5001, console.log(`server started port  ${port}` )  )
 const io = require("socket.io")(server, { 
     pingTimeout: 60000,
     cors: {
-      origin: ['http://localhost:3000', 'https://tall-a-tiv.onrender.com'],
+      origin: ['http://localhost:3000'],
       // credentials: true,
     },
   });
