@@ -47,7 +47,6 @@ import { Spinner } from "@chakra-ui/spinner";
 // import NotificationBadge from "react-notification-badge";
 // import { Effect } from "react-notification-badge";
 import { getSender } from "../../../config/ChatLogics";
-import React from "react";
 
 
 
