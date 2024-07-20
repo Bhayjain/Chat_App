@@ -54,7 +54,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        `https://tall-a-tiv.onrender.com/api/user/login`,
+        "/api/user",
         {
           name,
           email,

@@ -20,8 +20,8 @@ import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/miscellaneous/UpdateGroupChatModal"
 
 import { ChatState } from "../Context/ChatProvider";
-// const ENDPOINT = "http://localhost:5001";
-const ENDPOINT = "https://tall-a-tiv.onrender.com"
+const ENDPOINT = "http://localhost:5001";
+// const ENDPOINT = ""
 
 var socket, selectedChatCompare;
 
@@ -58,7 +58,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `https://tall-a-tiv.onrender.com/api/message/${selectedChat._id}`,
+        `/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -89,7 +89,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          `https://tall-a-tiv.onrender.com/api/message`,
+          `/api/message`,
           {
             content: newMessage,
             chatId: selectedChat,
@@ -98,6 +98,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         );
         socket.emit("new message", data);
         setMessages([...messages, data]);
+        // fetchChats()
+
          
       } catch (error) {
         toast({
@@ -167,6 +169,30 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       }
     }, timerLength);
   };
+  // const fetchChats = async () => {
+  //   // console.log(user._id);
+  //   try {
+  //     const config = {
+  //       headers: {
+  //         Authorization: `Bearer ${user.token}`,
+  //       },
+  //     };
+
+  //     const { data } = await axios.get("/api/chat", config);
+  //     // setChats(data);
+
+  //     console.log(data);
+  //   } catch (error) {
+  //     toast({
+  //       title: "Error Occured!",
+  //       description: "Failed to Load the chats",
+  //       status: "error",
+  //       duration: 5000,
+  //       isClosable: true,
+  //       position: "bottom-left",
+  //     });
+  //   }
+  // };
 
   return (
     <>

@@ -76,7 +76,7 @@ const GroupChatModal = ({ children }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`https://tall-a-tiv.onrender.com/api/user?search=${search}`, config);
+      const { data } = await axios.get(`/api/user?search=${search}`, config);
       // console.log(data);
       setLoading(false);
       setSearchResult(data);
@@ -117,7 +117,7 @@ const GroupChatModal = ({ children }) => {
       };
       const { data } = await axios.post( 
 
-        `https://tall-a-tiv.onrender.com/api/chat/group`,
+        `/api/chat/group`,
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),
@@ -161,7 +161,7 @@ const GroupChatModal = ({ children }) => {
         },
       };
 
-      const { data } = await axios.get(`https://tall-a-tiv.onrender.com/api/chat`, config);
+      const { data } = await axios.get(`/api/chat`, config);
       console.log("vdsbv", data);
       setChats(data);
     } catch (error) {

@@ -33,7 +33,7 @@ import ProfileModal from "./ProfileModal";
 import { Spinner } from "@chakra-ui/spinner";
 // import NotificationBadge from "react-notification-badge";
 // import { Effect } from "react-notification-badge";
-import { server_link } from "../../../urllink";
+// import { server_link } from "../../../urllink";
 
 import { getSender } from "../../../config/ChatLogics";
 // import { useDisclosure } from "@chakra-ui/hooks";
@@ -140,7 +140,7 @@ const SideDrawer = ({ children }) => {
         },
       };
 
-      const { data } = await axios.get(`${server_link}/api/user?search=${search}`, config);
+      const { data } = await axios.get(`/api/user?search=${search}`, config);
 
       setLoading(false);
       setSearchResult(data);
@@ -162,7 +162,7 @@ const SideDrawer = ({ children }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post(`${server_link}/api/chat`, { userId }, config);
+      const { data } = await axios.post(`/api/chat`, { userId }, config);
 
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
       setSelectedChat(data);
@@ -234,7 +234,7 @@ const SideDrawer = ({ children }) => {
                     <div className="mycalendar" style={{ height: "856px" }}>
 
                       {searchResult.map((value, index) => {
-                        return (
+                        return ( 
                           <Box key={index}
                             // onClick={handleFunction}
                             className=""

@@ -45,10 +45,17 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "https://tall-a-tiv.onrender.com/api/user/login",
+        "/api/user/login",
         { email, password },
         config
       );
+
+      console.log("logimmmmmmmmmmmmm");
+
+      setUser(data);
+      localStorage.setItem("userInfo", JSON.stringify(data));
+      setLoading(false);
+      navigate("/chats");
 
       toast({
         title: "Login Successful",
@@ -57,10 +64,7 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       });
-      setUser(data);
-      localStorage.setItem("userInfo", JSON.stringify(data));
-      setLoading(false);
-      navigate("/chats");
+      
     } catch (error) {
       toast({
         title: "Error Occured!",
