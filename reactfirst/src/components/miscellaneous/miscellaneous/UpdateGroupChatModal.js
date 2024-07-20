@@ -26,6 +26,8 @@ import UserListItem from "../../userAvatar/UserListItem";
 import UserBadgeItem from "../../userAvatar/UserBadgeItem";
 import { Avatar } from "@chakra-ui/avatar";
 import {  Text } from "@chakra-ui/layout";
+import React from "react";
+
 
 
 const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {

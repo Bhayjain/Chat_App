@@ -13,6 +13,8 @@ import { useNavigate } from "react-router";
 // import Signup from "../components/Authentication/Signup";
 import Login from "../components/authentication/login";
 import Signup from "../components/authentication/Registrationform";
+import React from "react";
+
 
 function Homepage() {
   const navigate = useNavigate();

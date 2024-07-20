@@ -24,6 +24,8 @@ import UserListItem from "../../userAvatar/UserListItem";
 import { Avatar } from "@chakra-ui/avatar";
 import {  Text } from "@chakra-ui/layout";
 import './modal.css'
+import React from "react";
+
 
 const GroupChatModal = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();

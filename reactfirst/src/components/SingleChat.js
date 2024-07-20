@@ -11,6 +11,8 @@ import ProfileModal from "./miscellaneous/ProfileModal";
 import ScrollableChat from "./ScrollableChat";
 import Lottie from "react-lottie";
 import animationData from "../animations/typing.json";
+import React from "react";
+
 
 import io from "socket.io-client";
 // import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";

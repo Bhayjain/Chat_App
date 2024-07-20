@@ -11,6 +11,8 @@ import { ChatState } from "../Context/ChatProvider";
 import { getSender } from "../config/ChatLogics";
 import './mychat.css'
 import { Avatar } from "@chakra-ui/avatar";
+import React from "react";
+
 
 
 

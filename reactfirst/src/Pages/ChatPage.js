@@ -5,6 +5,8 @@ import MyChats from "../components/MyChats";
 import Chatbox from "../components/Chatbox";
 import "./chatpage.css"
 import { useState } from "react";
+import React from "react";
+
 
 const ChatPage = () => {  
     const [fetchAgain, setFetchAgain] = useState(false);

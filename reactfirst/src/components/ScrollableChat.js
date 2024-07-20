@@ -3,6 +3,8 @@ import { Tooltip } from "@chakra-ui/tooltip";
 import ScrollableFeed from "react-scrollable-feed";
 import './mychat.css'
 
+import React from "react";
+
 import {
   isLastMessage,
   isSameSender,
