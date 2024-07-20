@@ -63,15 +63,15 @@ if (process.env.NODE_ENV == "production") {
 
 
 // Error Handling middlewares
-app.use(notFound);W
+app.use(notFound);
 app.use(errorHandler);
 
 
 
 
-const port = process.env.port || 5001
+const port = process.env.PORT || 5001;
 // node/backed
-const server = app.listen(5001, console.log(`server started port  ${port}` )  ) 
+const server = app.listen(port, console.log(`server started port  ${port}` )  ) 
 
 
 const io = require("socket.io")(server, { 
