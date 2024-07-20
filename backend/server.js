@@ -9,7 +9,7 @@ const cors = require('cors');
 const userRoutes = require('./routes/userRoutes')
 const ChatRoutes = require('./routes/ChatRoutes')
 const messageRoutes = require("./routes/messageRoutes");
-const { Server } = require("socket.io");
+// const { Server } = require("socket.io");
 const path = require("path");
 
 
@@ -77,8 +77,8 @@ const server = app.listen(5001, console.log(`server started port  ${port}` )  )
 const io = require("socket.io")(server, { 
     pingTimeout: 60000,
     cors: {
-      origin: "http://localhost:3000",
-      // credentials: true,
+        origin: 'https://tall-a-tiv.onrender.com'
+        // credentials: true,
     },
   });
   
