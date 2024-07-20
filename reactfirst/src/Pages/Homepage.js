@@ -6,7 +6,6 @@ import {
   TabPanel,
   TabPanels,
   Tabs,
-  Text,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router";

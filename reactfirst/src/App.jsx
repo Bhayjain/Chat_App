@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Registrationform from './components/authentication/Registrationform';
 import ChatPage from './Pages/ChatPage';
 import ChatProvider from './Context/ChatProvider';
-import Loginform from './components/authentication/login';
+// import Loginform from './components/authentication/login';
 import { ChakraProvider } from "@chakra-ui/react";
 import Home from './home';
 import Homepage from './Pages/Homepage';

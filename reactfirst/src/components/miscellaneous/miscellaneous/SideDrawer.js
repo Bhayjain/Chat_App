@@ -20,24 +20,16 @@ import {
 
 } from "@chakra-ui/menu";
 import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
+
   useDisclosure,
-  IconButton,
-  Image,
+
 } from "@chakra-ui/react";
 
 import { useState } from "react";
 import { useToast } from "@chakra-ui/toast";
 
 import './sidedrawer.css'
-import Dropdown from 'react-bootstrap/Dropdown';
-import ReactDOM from 'react-dom';
+
 // import Modal from 'react-modal';
 import axios from "axios";
 // import { toast } from "@chakra-ui/react";

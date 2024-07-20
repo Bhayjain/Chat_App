@@ -21,7 +21,7 @@ import {
 
 const ProfileModal = ({  children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure(); 
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  // const [modalIsOpen, setIsOpen] = React.useState(false);
 
    const {user} = ChatState();
 
