@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family:sans-serif  !important; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(78 66 109) !important;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  font-size: 18px;
+  /* color: wheat; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.css-lp0dmfP{
+  height: 88.5vh !important;
+}

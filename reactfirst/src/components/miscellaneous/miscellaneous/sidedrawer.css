@@ -1,0 +1,241 @@
+.css-1r3tbwq{
+    display: none !important;
+}
+.padding_head{
+  padding: 11px;
+}
+
+.header{
+    padding: 20px ;
+   background-color:rgb(92 79 129) !important;
+   border-radius: 12px;
+   color: white; 
+ 
+    
+
+}
+
+.side_search_btn{
+  background-color:rgb(81 71 109) !important;
+
+
+}
+
+.side_search_btn:hover{
+  background-color:rgb(63, 53, 91) !important;
+
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.my_flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.dropdown-btn {
+    background-color: #bcbcbc; /* Green background */
+    color: white; /* White text */
+    padding: 6px; /* Padding inside button */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    cursor: pointer; /* Cursor pointer */
+    margin-left: 10px
+  }
+  
+  /* Hover effect for dropdown button */
+  .dropdown-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+
+  .dropdown-item {
+    color: #333; /* Text color */
+    padding: 12px 16px; /* Padding inside item */
+    text-decoration: none; /* Remove default link decoration */
+    display: block; /* Display as block element */
+  }
+  
+  /* Hover effect for dropdown menu item */
+  .dropdown-item:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+  }
+
+  .dropdown-menu {
+    display: block; /* Ensure menu items are displayed as block elements */
+    background-color:rgb(92 79 129) !important;
+    background-color:rgb(92 79 129) !important;
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Box shadow */
+  }
+
+
+  .my_profilr{
+    width: 15px;
+    border-radius: 50%;
+  }
+
+
+  .drop-dowm{
+    display: flex;
+    align-items: center;
+    fill: black;
+  }
+
+
+  .modal {
+    position: fixed;
+    left: -100%; /* Off-screen initially */
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    z-index: 1000; /* Ensure it overlays everything else */
+    transition: left 0.5s ease-in-out; /* Transition on left property */
+}
+
+.modal.show {
+    left: 0; /* Slide in from left when .show class is applied */
+}
+
+.modal-content {
+  background-color:rgb(92 79 129) !important;
+  width: 60%;
+    max-width: 345px;
+    position: fixed;
+    left: -100%;
+    top: 52%;
+    transform: translateY(-50%);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: slide-in 0.5s forwards;
+    height: 100vh;
+
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+@keyframes slide-in {
+    0% {
+        left: -100%; /* Start off-screen left */
+    }
+    100% {
+        left: 0; /* Slide to the center */
+    }
+} 
+
+.card{
+    padding: 10px;
+    background-color:rgb(92 79 129) !important;   
+    border-radius: 10px;
+    font-size: 10px;
+    margin-top: 18px;
+}
+
+.my_name_pic{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.mycalendar{
+    overflow-x: hidden ;
+    overflow-y: scroll;
+  }
+
+  .mycalendar::-webkit-scrollbar
+  {
+    width: 1px;
+    background-color:rgb(92 79 129) !important;
+  }
+
+  .mycalendar::-webkit-scrollbar-thumb
+  {
+    border-radius: 1px;
+    background-color:rgb(92 79 129) !important;
+  }
+  .mycalendar::-webkit-scrollbar-track
+  {
+    border-radius: 1px;
+    background-color:rgb(92 79 129) !important;
+  }
+
+  .mycalendar::-webkit-scrollbar
+  {
+    width: 1px;
+    background-color:rgb(92 79 129) !important;
+  }
+
+  .mycalendar::-webkit-scrollbar-thumb
+  {
+    border-radius: 1px;
+   background-color:rgb(92 79 129) !important;
+  }
+
+  .my_class {
+    width: 70% !important;
+    border-color: rgb(49, 41, 70) !important;
+    color: white !important;
+  }
+  .my_list{
+    background-color:rgb(92 79 129) !important;
+    border-color: rgb(49, 41, 70) !important;
+    padding: 10px;
+
+
+
+  }
+  .my_listt{
+    background-color:  rgb(81 71 109)
+    !important;
+    border-color: rgb(49, 41, 70) !important;
+    font-size: 12px;
+
+
+
+  }
+  .my_new_btn:hover{
+    background-color:rgb(63, 53, 91) !important;
+
+  }
+
+
+  .go_btn{
+    background-color: rgb(49, 41, 70)  !important;
+    color: white !important;
+
+
+  }
+  .go_btn:hover{
+    background-color: #38B2AC  !important;
+    color: white !important;
+
+
+  }
+
+  .my_bell_icon{
+    color: black;
+  }
+
+  .my_bell_icon{
+    background-color: red;
+    border-radius: 50%;
+    font-size: 10PX;
+    width: 13px;
+    /* height: 19px; */
+    position: absolute;
+    left: 19px;
+    top: 6px;
+  }

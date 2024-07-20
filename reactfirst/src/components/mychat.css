@@ -1,0 +1,120 @@
+.css-lp0dmf{
+    height: 550px !important;
+}
+
+.over-hidden .css-19x5eu5{
+    overflow-y: hidden !important;
+
+    
+
+}
+
+
+.mycalendar{
+    overflow-x: hidden ;
+    overflow-y: scroll;
+  }
+
+  .mycalendar::-webkit-scrollbar
+  {
+    width: 1px;
+    background-color: rgb(92 79 129) !important;
+  }
+
+  .mycalendar::-webkit-scrollbar-thumb
+  {
+    border-radius: 1px;
+    background-color:rgb(92 79 129) !important;
+  }
+  .mycalendar::-webkit-scrollbar-track
+  {
+    border-radius: 1px;
+    background-color: rgb(92 79 129) !important;
+  }
+
+  .mycalendar::-webkit-scrollbar
+  {
+    width: 1px;
+    background-color: rgb(92 79 129) !important;
+  }
+
+  .mycalendar::-webkit-scrollbar-thumb
+  {
+    border-radius: 1px;
+   background-color:rgb(92 79 129) !important;
+  }
+
+  .messages > div {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: end !important;
+    height: 468px !important;
+    padding-top: 85px;
+
+}
+
+
+.my_hover_group:hover{
+  background-color:rgb(63, 53, 91) !important;
+
+
+}
+
+
+.class_chat:hover{
+  background-color:rgb(63, 53, 91) !important;
+
+
+}
+
+
+.css-afjmnl {
+  background-color: rgb(92, 79, 129) !important;
+  border-color:  rgb(92, 79, 129) !important
+
+}
+
+ .css-1giizmx{
+  background-color: rgb(92, 79, 129) !important;
+  border-color:  rgb(92, 79, 129) !important
+
+}
+
+
+.mycalendarr > div{
+  overflow-x: hidden ;
+  overflow-y: scroll !important;
+}
+
+.mycalendarr > div::-webkit-scrollbar
+{
+  width: 1px;
+  background-color: rgb(81 71 109) !important;
+}
+
+.mycalendarr > div::-webkit-scrollbar-thumb
+{
+  border-radius: 1px;
+  background-color: rgb(81 71 109) !important;
+}
+.mycalendarr > div::-webkit-scrollbar-track
+{
+  border-radius: 1px;
+  background-color: rgb(81 71 109) !important;
+}
+
+.mycalendarr > div::-webkit-scrollbar
+{
+  width: 1px;
+  background-color: rgb(81 71 109) !important;
+}
+
+.mycalendarr > div::-webkit-scrollbar-thumb
+{
+  border-radius: 1px;
+  background-color: rgb(81 71 109) !important;
+}
+
+
+

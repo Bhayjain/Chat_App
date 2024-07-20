@@ -1,0 +1,33 @@
+.mycalendar_new{
+    overflow-x: hidden ;
+    overflow-y: scroll;
+  }
+
+  .mycalendar_new::-webkit-scrollbar
+  {
+    width: 1px;
+    background-color: "white" !important;
+  }
+
+  .mycalendar_new::-webkit-scrollbar-thumb
+  {
+    border-radius: 1px;
+    background-color: "white" !important;
+}
+  .mycalendar_new::-webkit-scrollbar-track
+  {
+    border-radius: 1px;
+    background-color: "white" !important;
+  }
+
+  .mycalendar_new::-webkit-scrollbar
+  {
+    width: 1px;
+    background-color: "white" !important;
+  }
+
+  .mycalendar_new::-webkit-scrollbar-thumb
+  {
+    border-radius: 1px;
+   background-color: "white" !important;
+  }
