@@ -18,7 +18,7 @@ import { useState } from "react";
 // import { ChatState } from "../../Context/ChatProvider";
 import { ChatState } from "../../../Context/ChatProvider";
 import UserBadgeItem from "../../userAvatar/UserBadgeItem";
-import UserListItem from "../../userAvatar/UserListItem";
+// import UserListItem from "../../userAvatar/UserListItem";
 // import UserBadgeItem from "../userAvatar/UserBadgeItem";
 // import UserListItem from "../userAvatar/UserListItem";
 import { Avatar } from "@chakra-ui/avatar";
@@ -37,6 +37,8 @@ const GroupChatModal = ({ children }) => {
   const toast = useToast();
 
   const { user, chats, setChats } = ChatState();
+
+  console.log(chats)
 
   const handleGroup = (userToAdd) => {
     console.log("vhdsa", userToAdd);

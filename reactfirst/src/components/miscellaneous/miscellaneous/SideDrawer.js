@@ -19,11 +19,6 @@ import {
   MenuList,
 
 } from "@chakra-ui/menu";
-import {
-
-  useDisclosure,
-
-} from "@chakra-ui/react";
 
 import { useState } from "react";
 import { useToast } from "@chakra-ui/toast";
@@ -39,6 +34,8 @@ import { Spinner } from "@chakra-ui/spinner";
 // import NotificationBadge from "react-notification-badge";
 // import { Effect } from "react-notification-badge";
 import { getSender } from "../../../config/ChatLogics";
+// import { useDisclosure } from "@chakra-ui/hooks";
+
 
 
 
@@ -50,23 +47,23 @@ import { getSender } from "../../../config/ChatLogics";
 // //  ////////console.log("admin_nav_height",nav_height);
 // var my_height = height - nav_height;
 
-import { Link, useNavigate, useHistory } from "react-router-dom";
-import React, { useEffect } from "react";
+import {  useNavigate } from "react-router-dom";
+import React from "react";
 
 
 
 
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
+// const customStyles = {
+//   content: {
+//     top: '50%',
+//     left: '50%',
+//     right: 'auto',
+//     bottom: 'auto',
+//     marginRight: '-50%',
+//     transform: 'translate(-50%, -50%)',
+//   },
+// };
 
 
 
@@ -82,6 +79,9 @@ const SideDrawer = ({ children }) => {
 
 
 
+  console.log(loading)
+
+
   const { user,
 
     notification,
@@ -93,11 +93,17 @@ const SideDrawer = ({ children }) => {
   } = ChatState();
   const [showModal, setShowModal] = useState(false);
   // const [modalIsOpen, setIsOpen] = React.useState(false);
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  // const {  onClose } = useDisclosure();
 
 
   const navigate = useNavigate()
+  // console.log("userr_new", modalIsOpen);
+  // console.log("userr_new", isOpen);
+
+  // const { isOpen } = useDisclosure();
+
+
+
 
 
   console.log("userr_new", user);
@@ -108,18 +114,6 @@ const SideDrawer = ({ children }) => {
   };
 
 
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    // subtitle.style.color = '#f00';
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
 
 
   const logouthandlesr = () => {
@@ -171,7 +165,7 @@ const SideDrawer = ({ children }) => {
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
       setSelectedChat(data);
       setLoadingChat(false);
-      onClose();
+      toggleModal();
     } catch (error) {
       toast({
         title: "Error fetching the chat",
@@ -346,8 +340,8 @@ const SideDrawer = ({ children }) => {
                   />
                 </MenuButton>
                 <MenuList bg=" rgb(81 71 109)" style={{padding:"10px", borderColor:"rgb(81 71 109)"}}>
-                  <ProfileModal>
-                    <MenuItem bg=" rgb(92 79 129) " style={{fontSize:"12px", borderRadius:"5px"}} onClick={openModal}>My Profile</MenuItem>{" "}</ProfileModal>
+                  <ProfileModal  user={user}>
+                    <MenuItem bg=" rgb(92 79 129) " style={{fontSize:"12px", borderRadius:"5px"}}>My Profile</MenuItem>{" "}</ProfileModal>
                   <MenuDivider />
                   <MenuItem bg="rgb(92 79 129) " style={{fontSize:"12px",  borderRadius:"5px"}} onClick={logouthandlesr}>Logout</MenuItem>
                 </MenuList>

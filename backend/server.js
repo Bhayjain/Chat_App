@@ -77,8 +77,8 @@ const server = app.listen(5001, console.log(`server started port  ${port}` )  )
 const io = require("socket.io")(server, { 
     pingTimeout: 60000,
     cors: {
-        origin: 'https://tall-a-tiv.onrender.com'
-        // credentials: true,
+      origin: ['http://localhost:3000', 'https://tall-a-tiv.onrender.com'],
+      // credentials: true,
     },
   });
   
