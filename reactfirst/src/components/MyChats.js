@@ -12,7 +12,7 @@ import { getSender } from "../config/ChatLogics";
 import './mychat.css'
 import { Avatar } from "@chakra-ui/avatar";
 import React from "react";
-import { server_link } from "../urllink";
+// import { server_link } from "../urllink";
 
 
 
@@ -33,7 +33,7 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
 
-      const { data } = await axios.get(`${server_link}api/chat`, config);
+      const { data } = await axios.get(`https://tall-a-tiv.onrender.comapi/chat`, config);
       console.log("vdsbv", data);
       setChats(data);
     } catch (error) {

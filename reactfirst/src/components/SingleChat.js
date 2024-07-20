@@ -12,16 +12,16 @@ import ScrollableChat from "./ScrollableChat";
 import Lottie from "react-lottie";
 import animationData from "../animations/typing.json";
 import React from "react";
-import { server_link } from "../urllink";
+// import {  } from "../urllink";
 
-
+// server_link
 import io from "socket.io-client";
 // import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import UpdateGroupChatModal from "./miscellaneous/miscellaneous/UpdateGroupChatModal"
 
 import { ChatState } from "../Context/ChatProvider";
 // const ENDPOINT = "http://localhost:5001";
-const ENDPOINT = server_link
+const ENDPOINT = "https://tall-a-tiv.onrender.com"
 
 var socket, selectedChatCompare;
 
@@ -58,7 +58,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `${server_link}/api/message/${selectedChat._id}`,
+        `https://tall-a-tiv.onrender.com/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -89,7 +89,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          `${server_link}/api/message`,
+          `https://tall-a-tiv.onrender.com/api/message`,
           {
             content: newMessage,
             chatId: selectedChat,

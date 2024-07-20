@@ -6,7 +6,7 @@ import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
 import { useState } from "react";
 import React from "react";
-import { server_link } from "../../urllink";
+// import { server_link } from "../../urllink";
 
 
 import { useNavigate } from "react-router-dom";
@@ -54,7 +54,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        `${server_link}/api/user/login`,
+        `https://tall-a-tiv.onrender.com/api/user/login`,
         {
           name,
           email,

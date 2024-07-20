@@ -25,7 +25,7 @@ import { Avatar } from "@chakra-ui/avatar";
 import {  Text } from "@chakra-ui/layout";
 import './modal.css'
 import React from "react";
-import { server_link } from "../../../urllink";
+// import { server_link } from "../../../urllink";
 
 
 const GroupChatModal = ({ children }) => {
@@ -76,7 +76,7 @@ const GroupChatModal = ({ children }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`${server_link}/api/user?search=${search}`, config);
+      const { data } = await axios.get(`https://tall-a-tiv.onrender.com/api/user?search=${search}`, config);
       // console.log(data);
       setLoading(false);
       setSearchResult(data);
@@ -117,7 +117,7 @@ const GroupChatModal = ({ children }) => {
       };
       const { data } = await axios.post( 
 
-        `${server_link}/api/chat/group`,
+        `https://tall-a-tiv.onrender.com/api/chat/group`,
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),
@@ -161,7 +161,7 @@ const GroupChatModal = ({ children }) => {
         },
       };
 
-      const { data } = await axios.get(`${server_link}/api/chat`, config);
+      const { data } = await axios.get(`https://tall-a-tiv.onrender.com/api/chat`, config);
       console.log("vdsbv", data);
       setChats(data);
     } catch (error) {
