@@ -26,7 +26,7 @@ import UserBadgeItem from "../../userAvatar/UserBadgeItem";
 import { Avatar } from "@chakra-ui/avatar";
 import {  Text } from "@chakra-ui/layout";
 import React from "react";
-
+import { server_link } from "../../../urllink";
 
 
 const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
@@ -54,7 +54,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`http://localhost:5001/api/user?search=${search}`, config);
+      const { data } = await axios.get(`${server_link}/api/user?search=${search}`, config);
       console.log(data);
       setLoading(false);
       setSearchResult(data);
@@ -83,7 +83,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.put(
-        `http://localhost:5001/api/chat/rename`,
+        `${server_link}/api/chat/rename`,
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -142,7 +142,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.put(
-        `http://localhost:5001/api/chat/groupadd`,
+        `${server_link}/api/chat/groupadd`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -187,7 +187,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.put(
-        `http://localhost:5001/api/chat/groupremove`,
+        `${server_link}/api/chat/groupremove`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -224,7 +224,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
         },
       };
 
-      const { data } = await axios.get(`http://localhost:5001/api/chat`, config);
+      const { data } = await axios.get(`${server_link}/api/chat`, config);
       console.log("vdsbv", data);
       setChats(data);
     } catch (error) {

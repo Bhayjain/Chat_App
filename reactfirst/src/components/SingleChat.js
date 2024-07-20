@@ -12,6 +12,7 @@ import ScrollableChat from "./ScrollableChat";
 import Lottie from "react-lottie";
 import animationData from "../animations/typing.json";
 import React from "react";
+import { server_link } from "../urllink";
 
 
 import io from "socket.io-client";
@@ -19,7 +20,9 @@ import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/miscellaneous/UpdateGroupChatModal"
 
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "http://localhost:5001"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
+// const ENDPOINT = "http://localhost:5001";
+const ENDPOINT = server_link
+
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -55,7 +58,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `http://localhost:5001/api/message/${selectedChat._id}`,
+        `${server_link}/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -86,7 +89,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "http://localhost:5001/api/message",
+          `${server_link}/api/message`,
           {
             content: newMessage,
             chatId: selectedChat,

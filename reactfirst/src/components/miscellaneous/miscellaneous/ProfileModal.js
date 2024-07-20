@@ -2,6 +2,8 @@ import { ViewIcon } from "@chakra-ui/icons";
 import { ChatState } from "../../../Context/ChatProvider";
 import React from "react";
 // import Modal from 'react-modal';
+// import { server_link } from "../../../urllink";
+
 
 import {
   Modal,

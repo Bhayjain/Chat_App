@@ -6,6 +6,8 @@ import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
 import { useState } from "react";
 import React from "react";
+import { server_link } from "../../urllink";
+
 
 import { useNavigate } from "react-router-dom";
 const Signup = () => {
@@ -52,7 +54,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:5001/api/user",
+        `${server_link}/api/user/login`,
         {
           name,
           email,

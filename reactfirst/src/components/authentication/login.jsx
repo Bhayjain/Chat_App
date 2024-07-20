@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 import { ChatState } from "../../Context/ChatProvider";
 import React from "react";
 
+import { server_link } from "../../urllink";
+
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -43,7 +45,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "https://tall-a-tiv.onrender.com/api/user/login",
+        server_link + "/api/user/login",
         { email, password },
         config
       );
