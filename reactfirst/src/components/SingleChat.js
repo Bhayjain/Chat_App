@@ -20,8 +20,8 @@ import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/miscellaneous/UpdateGroupChatModal"
 
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "http://localhost:5001";
-// const ENDPOINT = ""
+// const ENDPOINT = "http://localhost:5001";
+const ENDPOINT = "https://tall-a-tiv.onrender.com"
 
 var socket, selectedChatCompare;
 
@@ -108,7 +108,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
           status: "error",
           duration: 5000,
           isClosable: true,
-          position: "bottom",
+          position: "bottom", 
         });
       }
     }
