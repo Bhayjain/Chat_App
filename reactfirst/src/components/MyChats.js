@@ -33,6 +33,8 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
 
+      console.log("user token", user.token)
+
       const { data } = await axios.get(`/api/chat`, config);
       console.log("vdsbv", data);
       setChats(data);

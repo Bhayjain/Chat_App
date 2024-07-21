@@ -84,10 +84,12 @@ const server = app.listen(5001, console.log(`server started port  ${port}` )  )
 const io = require("socket.io")(server, { 
     pingTimeout: 60000,
     cors: {
-        origin: process.env.FRONTEND_URL || "http://localhost:3000", // Use FRONTEND_URL for socket.io CORS
+        origin: process.env.FRONTEND_URL || "http://localhost:5001", // Use FRONTEND_URL for socket.io CORS
         // credentials: true,
     },
   });
+
+  console.log("fronendurl", process.env.FRONTEND_URL);
   
   io.on("connection", (socket) => {
     console.log("Connected to socket.io");
