@@ -9,7 +9,7 @@ const cors = require('cors');
 const userRoutes = require('./routes/userRoutes')
 const ChatRoutes = require('./routes/ChatRoutes')
 const messageRoutes = require("./routes/messageRoutes");
-const { Server } = require("socket.io");
+// const { Server } = require("socket.io");
 const path = require("path");
 
 
