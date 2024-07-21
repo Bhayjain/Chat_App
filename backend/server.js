@@ -9,6 +9,7 @@ const cors = require('cors');
 const userRoutes = require('./routes/userRoutes')
 const ChatRoutes = require('./routes/ChatRoutes')
 const messageRoutes = require("./routes/messageRoutes");
+const { Server } = require("socket.io");
 const path = require("path");
 
 
@@ -17,15 +18,7 @@ const path = require("path");
 dotenv.config();
 connectDB();
 const app = express();
-
-
-const corsOptions = {
-    origin: process.env.FRONTEND_URL || "http://localhost:3000", // Use FRONTEND_URL or fallback to localhost
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  };
-  
-  app.use(cors(corsOptions));
+app.use(cors());
 
 
 app.use(express.json());
@@ -49,20 +42,14 @@ app.use("/api/message", messageRoutes);
 
 const __dirname1 = path.resolve();
 
-console.log("process.env.NODE_ENV", process.env.NODE_ENV);
-
-
-if (process.env.NODE_ENV == "production") {
-    console.log("my_loggggg");
+if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname1, "/reactfirst/build")));
 
   app.get("*", (req, res) =>
     res.sendFile(path.resolve(__dirname1, "reactfirst", "build", "index.html"))
   );
 } else {
-
-    console.log("elseeeeeeeeeeee");
-  app.get("/", (req, res) => {  
+  app.get("/", (req, res) => {
     res.send("API is running..");
   });
 }
@@ -84,12 +71,10 @@ const server = app.listen(5001, console.log(`server started port  ${port}` )  )
 const io = require("socket.io")(server, { 
     pingTimeout: 60000,
     cors: {
-        origin: process.env.FRONTEND_URL || "http://localhost:5001", // Use FRONTEND_URL for socket.io CORS
-        // credentials: true,
+      origin: "http://localhost:5001",
+      // credentials: true,
     },
   });
-
-  console.log("fronendurl", process.env.FRONTEND_URL);
   
   io.on("connection", (socket) => {
     console.log("Connected to socket.io");
